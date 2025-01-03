@@ -1,21 +1,19 @@
+# Project Structure: `my-t3-app`
 
-## Directory Details
+my-t3-app/
+├── prisma/                # Contains the Prisma schema for database setup
+│   └── schema.prisma      # Define your database models here
+├── public/                # Static files (e.g., images, icons)
+├── src/                   # Main source code for the app
+│   ├── pages/             # Next.js Pages Router - defines routes for your app
+│   │   ├── api/           # API routes
+│   │   │   └── trpc/      # tRPC handler for backend communication
+│   │   └── index.tsx      # Homepage of your app
+│   ├── server/            # Backend logic
+│   │   ├── api/routers/   # tRPC routers for your app's backend
+│   │   └── context.ts     # Shared context for tRPC (e.g., database connections)
+│   ├── styles/            # Global CSS (Tailwind setup is here)
+│   └── utils/             # Utility files like tRPC client setup
+└── .env                   # Environment variables (e.g., database connection)
 
-- **`prisma/`**: Contains Prisma schema for defining database models.
-  - **`schema.prisma`**: File to define your database models.
-
-- **`public/`**: Static files like images and icons.
-
-- **`src/`**: Main source code for the application.
-  - **`pages/`**: Next.js Pages Router.
-    - **`api/`**: API routes for server-side logic.
-      - **`trpc/`**: tRPC handler for backend communication.
-    - **`index.tsx`**: Homepage of the app.
-  - **`server/`**: Backend logic for the app.
-    - **`api/routers/`**: Contains tRPC routers to manage backend procedures.
-    - **`context.ts`**: Shared context for tRPC (e.g., database connections).
-  - **`styles/`**: Global CSS setup, often used for Tailwind CSS.
-  - **`utils/`**: Utility files such as the tRPC client setup.
-
-- **`.env`**: Stores environment variables like database connection strings.
 
